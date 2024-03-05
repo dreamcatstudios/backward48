@@ -3,21 +3,338 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="./output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="output.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body>
-    <nav>
-      <ul>
+
+  <body class="m-0 p-0 h-full w-full">
+    <nav
+      class="flex justify-between items-center p-5 z-30 fixed top-0 w-full bg-white shadow-lg"
+    >
+      <img
+        src="https://forward48.com/wp-content/uploads/2022/09/5f6b874fbb97e55b61db0edb_Asset-1.png"
+        alt=""
+        class="h-10"
+      />
+      <ul class="hidden md:flex space-x-5">
         <li>
-          <a href="#">Home</a>
+          <a href="#" class="text-lg font-semibold text-[#8B163D]"> Home </a>
         </li>
         <li>
-          <a href="#">About</a>
+          <a href="#" class="text-lg font-semibold text-[#8B163D]"> About </a>
         </li>
         <li>
-          <a href="#">Contact</a>
+          <a href="#" class="text-lg font-semibold text-[#8B163D]">
+            Schedule
+          </a>
+        </li>
+        <li>
+          <a href="#" class="text-lg font-semibold text-[#8B163D]">
+            Sponsors
+          </a>
+        </li>
+        <li>
+          <a href="#" class="text-lg font-semibold text-[#8B163D]"> Contact </a>
         </li>
       </ul>
+      <button class="md:hidden text-xl">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-8 w-8"
+          viewBox="0 0 20 20"
+          fill="#8B163D"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 9a1 1 0 100 2h12a1 1 0 100-2H3zM3 13a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+            clip-rule="evenodd"
+          />
+        </svg>
+      </button>
     </nav>
+    <section class="min-h-screen ">
+      <div
+        class="h-full w-full text-center absolute z-10 flex flex-col justify-center items-center"
+      >
+        <div class="flex flex-col items-center gap-3 mt-20 md:mt-32">
+          <h1 class="text-4xl md:text-7xl font-bold text-[#8B163D]">
+            Bending the future of <br />Wisconsin.
+          </h1>
+          <p class="text-base md:text-xl w-[70%]">
+            Backward48 is the region's inferior followership regression program.
+            We've meticulously crafted a journey of mundane tasks, irrelevant
+            skills, and networking with the same five people over lukewarm
+            coffee. Because why strive for success when you can comfortably
+            settle for mediocrity, right?
+          </p>
+          <div>
+            <button
+              type="button"
+              class="text-white uppercase bg-[#8B163D] hover:bg-blue-[#8B163D] focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-7 py-4 text-center me-2 mb-2 dark:bg-[#8B163D] dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            >
+              Apply Now
+            </button>
+          </div>
+          <div class="mt-2 shadow-lg">
+            <div class="aspect-w-16 aspect-h-9">
+              <iframe
+                class="shadow-sm rounded-sm"
+                width="618"
+                height="348"
+                src="https://www.youtube.com/embed/AEMOxzMhYMY"
+                title="Forward 48 Promo"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        id="particle-canvas"
+        class="fixed top-0 left-0 w-full h-full z-0"
+      ></div>
+    </section>
+    <!-- New section -->
+    <section class="min-h-screen">
+      <div class="h-full w-full text-center flex justify-center items-center">
+        <h2 class="text-4xl">New Section</h2>
+      </div>
+    </section>
+    <!-- New section -->
+    <section class="min-h-screen">
+      <div class="h-full w-full text-center flex justify-center items-center">
+        <h2 class="text-4xl">New Section</h2>
+      </div>
+    </section>
+    <script>
+      !(function (a) {
+        var b =
+          ("object" == typeof self && self.self === self && self) ||
+          ("object" == typeof global && global.global === global && global);
+        "function" == typeof define && define.amd
+          ? define(["exports"], function (c) {
+              b.ParticleNetwork = a(b, c);
+            })
+          : "object" == typeof module && module.exports
+          ? (module.exports = a(b, {}))
+          : (b.ParticleNetwork = a(b, {}));
+      })(function (a, b) {
+        var c = function (a) {
+          (this.canvas = a.canvas),
+            (this.g = a.g),
+            (this.particleColor = a.options.particleColor),
+            (this.x = Math.random() * this.canvas.width),
+            (this.y = Math.random() * this.canvas.height),
+            (this.velocity = {
+              x: (Math.random() - 0.5) * a.options.velocity,
+              y: (Math.random() - 0.5) * a.options.velocity,
+            });
+        };
+        return (
+          (c.prototype.update = function () {
+            (this.x > this.canvas.width + 20 || this.x < -20) &&
+              (this.velocity.x = -this.velocity.x),
+              (this.y > this.canvas.height + 20 || this.y < -20) &&
+                (this.velocity.y = -this.velocity.y),
+              (this.x += this.velocity.x),
+              (this.y += this.velocity.y);
+          }),
+          (c.prototype.h = function () {
+            this.g.beginPath(),
+              (this.g.fillStyle = this.particleColor),
+              (this.g.globalAlpha = 0.7),
+              this.g.arc(this.x, this.y, 1.5, 0, 2 * Math.PI),
+              this.g.fill();
+          }),
+          (b = function (a, b) {
+            (this.i = a),
+              (this.i.size = {
+                width: this.i.offsetWidth,
+                height: this.i.offsetHeight,
+              }),
+              (b = void 0 !== b ? b : {}),
+              (this.options = {
+                particleColor:
+                  void 0 !== b.particleColor ? b.particleColor : "#fff",
+                background: void 0 !== b.background ? b.background : "#fff",
+                interactive: void 0 !== b.interactive ? b.interactive : !0,
+                velocity: this.setVelocity(b.speed),
+                density: this.j(b.density),
+              }),
+              this.init();
+          }),
+          (b.prototype.init = function () {
+            if (
+              ((this.k = document.createElement("div")),
+              this.i.appendChild(this.k),
+              this.l(this.k, {
+                position: "absolute",
+                top: 0,
+                left: 0,
+                bottom: 0,
+                right: 0,
+                "z-index": 1,
+              }),
+              /(^#[0-9A-F]{6}$)|(^#[0-9A-F]{3}$)/i.test(
+                this.options.background
+              ))
+            )
+              this.l(this.k, { background: this.options.background });
+            else {
+              if (!/\.(gif|jpg|jpeg|tiff|png)$/i.test(this.options.background))
+                return (
+                  console.error(
+                    "Please specify a valid background image or hexadecimal color"
+                  ),
+                  !1
+                );
+              this.l(this.k, {
+                background:
+                  'url("' + this.options.background + '") no-repeat center',
+                "background-size": "cover",
+              });
+            }
+            if (
+              !/(^#[0-9A-F]{6}$)|(^#[0-9A-F]{3}$)/i.test(
+                this.options.particleColor
+              )
+            )
+              return (
+                console.error(
+                  "Please specify a valid particleColor hexadecimal color"
+                ),
+                !1
+              );
+            (this.canvas = document.createElement("canvas")),
+              this.i.appendChild(this.canvas),
+              (this.g = this.canvas.getContext("2d")),
+              (this.canvas.width = this.i.size.width),
+              (this.canvas.height = this.i.size.height),
+              this.l(this.i, { position: "relative" }),
+              this.l(this.canvas, { "z-index": "20", position: "relative" }),
+              window.addEventListener(
+                "resize",
+                function () {
+                  return this.i.offsetWidth === this.i.size.width &&
+                    this.i.offsetHeight === this.i.size.height
+                    ? !1
+                    : ((this.canvas.width = this.i.size.width =
+                        this.i.offsetWidth),
+                      (this.canvas.height = this.i.size.height =
+                        this.i.offsetHeight),
+                      clearTimeout(this.m),
+                      void (this.m = setTimeout(
+                        function () {
+                          this.o = [];
+                          for (
+                            var a = 0;
+                            a <
+                            (this.canvas.width * this.canvas.height) /
+                              this.options.density;
+                            a++
+                          )
+                            this.o.push(new c(this));
+                          this.options.interactive && this.o.push(this.p),
+                            requestAnimationFrame(this.update.bind(this));
+                        }.bind(this),
+                        500
+                      )));
+                }.bind(this)
+              ),
+              (this.o = []);
+            for (
+              var a = 0;
+              a <
+              (this.canvas.width * this.canvas.height) / this.options.density;
+              a++
+            )
+              this.o.push(new c(this));
+            this.options.interactive &&
+              ((this.p = new c(this)),
+              (this.p.velocity = { x: 0, y: 0 }),
+              this.o.push(this.p),
+              this.canvas.addEventListener(
+                "mousemove",
+                function (a) {
+                  (this.p.x = a.clientX - this.canvas.offsetLeft),
+                    (this.p.y = a.clientY - this.canvas.offsetTop);
+                }.bind(this)
+              ),
+              this.canvas.addEventListener(
+                "mouseup",
+                function (a) {
+                  (this.p.velocity = {
+                    x: (Math.random() - 0.5) * this.options.velocity,
+                    y: (Math.random() - 0.5) * this.options.velocity,
+                  }),
+                    (this.p = new c(this)),
+                    (this.p.velocity = { x: 0, y: 0 }),
+                    this.o.push(this.p);
+                }.bind(this)
+              )),
+              requestAnimationFrame(this.update.bind(this));
+          }),
+          (b.prototype.update = function () {
+            this.g.clearRect(0, 0, this.canvas.width, this.canvas.height),
+              (this.g.globalAlpha = 1);
+            for (var a = 0; a < this.o.length; a++) {
+              this.o[a].update(), this.o[a].h();
+              for (var b = this.o.length - 1; b > a; b--) {
+                var c = Math.sqrt(
+                  Math.pow(this.o[a].x - this.o[b].x, 2) +
+                    Math.pow(this.o[a].y - this.o[b].y, 2)
+                );
+                c > 120 ||
+                  (this.g.beginPath(),
+                  (this.g.strokeStyle = this.options.particleColor),
+                  (this.g.globalAlpha = (120 - c) / 120),
+                  (this.g.lineWidth = 0.7),
+                  this.g.moveTo(this.o[a].x, this.o[a].y),
+                  this.g.lineTo(this.o[b].x, this.o[b].y),
+                  this.g.stroke());
+              }
+            }
+            0 !== this.options.velocity &&
+              requestAnimationFrame(this.update.bind(this));
+          }),
+          (b.prototype.setVelocity = function (a) {
+            return "fast" === a
+              ? 1
+              : "slow" === a
+              ? 0.33
+              : "none" === a
+              ? 0
+              : 0.66;
+          }),
+          (b.prototype.j = function (a) {
+            return "high" === a
+              ? 5e3
+              : "low" === a
+              ? 2e4
+              : isNaN(parseInt(a, 10))
+              ? 1e4
+              : a;
+          }),
+          (b.prototype.l = function (a, b) {
+            for (var c in b) a.style[c] = b[c];
+          }),
+          b
+        );
+      });
+
+      var canvasDiv = document.getElementById("particle-canvas");
+      var options = {
+        particleColor: "#000",
+        interactive: true,
+        speed: "medium",
+        density: "medium",
+      };
+      var particleCanvas = new ParticleNetwork(canvasDiv, options);
+    </script>
   </body>
 </html>
