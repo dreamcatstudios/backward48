@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="output.css" />
+    <script src="https://player.vimeo.com/api/player.js"></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
@@ -12,7 +13,7 @@
 
   <body class="m-0 p-0 h-full w-full">
     <nav
-      class="flex justify-between items-center p-5 z-30 fixed top-0 w-full bg-white shadow-lg"
+      class="flex justify-between items-center p-5 z-30 fixed top-0 w-full bg-white shadow-lg max-width-[133rem] mx-auto px-4 sm:px-6 lg:px-8"
     >
       <img
         src="https://forward48.com/wp-content/uploads/2022/09/5f6b874fbb97e55b61db0edb_Asset-1.png"
@@ -21,20 +22,10 @@
       />
       <ul class="hidden md:flex space-x-5">
         <li>
-          <a href="#" class="text-lg font-semibold text-[#8B163D]"> Home </a>
-        </li>
-        <li>
           <a href="#" class="text-lg font-semibold text-[#8B163D]"> About </a>
         </li>
         <li>
-          <a href="#" class="text-lg font-semibold text-[#8B163D]">
-            Schedule
-          </a>
-        </li>
-        <li>
-          <a href="#" class="text-lg font-semibold text-[#8B163D]">
-            Sponsors
-          </a>
+          <a href="#" class="text-lg font-semibold text-[#8B163D]"> Pricing </a>
         </li>
         <li>
           <a href="#" class="text-lg font-semibold text-[#8B163D]"> Contact </a>
@@ -51,44 +42,47 @@
             fill-rule="evenodd"
             d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 9a1 1 0 100 2h12a1 1 0 100-2H3zM3 13a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
             clip-rule="evenodd"
+            x
           />
         </svg>
       </button>
     </nav>
-    <section class="min-h-screen ">
+
+    <section class="min-h-screen mb-5 overflow-hidden">
       <div
-        class="h-full w-full text-center absolute z-10 flex flex-col justify-center items-center"
+        class="h-full max-w-[133rem] mx-auto text-center absolute z-10 flex flex-col justify-center items-center px-4 md:px-0"
       >
         <div class="flex flex-col items-center gap-3 mt-20 md:mt-32">
-          <h1 class="text-4xl md:text-7xl font-bold text-[#8B163D]">
-            Bending the future of <br />Wisconsin.
+          <h1 class="text-3xl md:text-5xl lg:text-7xl font-bold text-[#8B163D]">
+            Bending the future of <br class="hidden md:block" />Wisconsin.
           </h1>
-          <p class="text-base md:text-xl w-[70%]">
+          <p class="text-base md:text-xl w-full lg:w-[80%]">
             Backward48 is the region's inferior followership regression program.
             We've meticulously crafted a journey of mundane tasks, irrelevant
             skills, and networking with the same five people over lukewarm
             coffee. Because why strive for success when you can comfortably
             settle for mediocrity, right?
           </p>
-          <div>
-            <button
-              type="button"
-              class="text-white uppercase bg-[#8B163D] hover:bg-blue-[#8B163D] focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-7 py-4 text-center me-2 mb-2 dark:bg-[#8B163D] dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-            >
-              Apply Now
-            </button>
-          </div>
-          <div class="mt-2 shadow-lg">
-            <div class="aspect-w-16 aspect-h-9">
+          <a
+            href="./form.html"
+            class="text-white uppercase bg-[#8B163D] hover:bg-blue-[#8B163D] focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-3 md:px-7 md:py-4 text-center mt-4 md:mt-6"
+          >
+            Apply Now
+          </a>
+          <div class="mt-6 shadow-lg">
+            <div style="padding: 56.25% 0 0 0; position: relative">
               <iframe
-                class="shadow-sm rounded-sm"
-                width="618"
-                height="348"
-                src="https://www.youtube.com/embed/AEMOxzMhYMY"
-                title="Forward 48 Promo"
+                src="https://player.vimeo.com/video/920195333?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
                 frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen
+                allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
+                style="
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  width: 100%;
+                  height: 100%;
+                "
+                title="Backward48 - Promo"
               ></iframe>
             </div>
           </div>
@@ -99,18 +93,656 @@
         class="fixed top-0 left-0 w-full h-full z-0"
       ></div>
     </section>
-    <!-- New section -->
-    <section class="min-h-screen">
-      <div class="h-full w-full text-center flex justify-center items-center">
-        <h2 class="text-4xl">New Section</h2>
+
+    <section class="dark:bg-gray-900 py-10 overflow-hidden">
+      <div class="max-w-[133rem] mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-white text-3xl font-bold text-center mb-8">
+          LEARN FROM THE REGIONS BEST EXECUTIVES
+        </h2>
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6"
+        >
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <img
+              class="h-36 w-36 rounded-full mx-auto"
+              src="https://forward48.com/wp-content/uploads/2023/12/peter4.jpg"
+              alt="Peter Feigin"
+            />
+            <h3 class="text-lg font-semibold text-center">Peter Feigin</h3>
+            <p class="text-sm text-gray-600 text-center">
+              President at Milwaukee Bucks
+            </p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <img
+              class="h-36 w-36 rounded-full mx-auto"
+              src="https://forward48.com/wp-content/uploads/2023/12/sum1.jpg"
+              alt="Sumathi Thiyagarajan"
+            />
+            <h3 class="text-lg font-semibold text-center">
+              Sumathi Thiyagarajan
+            </h3>
+            <p class="text-sm text-gray-600 text-center">
+              Vice President at Milwaukee Bucks
+            </p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <img
+              class="h-36 w-36 rounded-full mx-auto"
+              src="https://forward48.com/wp-content/uploads/2023/12/chelle1.jpg"
+              alt="Michelle Nettles"
+            />
+            <h3 class="text-lg font-semibold text-center">Michelle Nettles</h3>
+            <p class="text-sm text-gray-600 text-center">
+              Chief People and Culture Officer at Manpower Group
+            </p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <img
+              class="h-36 w-36 rounded-full mx-auto"
+              src="https://forward48.com/wp-content/uploads/2023/12/vincent3.jpg"
+              alt="Vincent Lyles"
+            />
+            <h3 class="text-lg font-semibold text-center">Vincent Lyles</h3>
+            <p class="text-sm text-gray-600 text-center">
+              Executive Director at Milwaukee Synogoge
+            </p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <img
+              class="h-36 w-36 rounded-full mx-auto"
+              src="https://forward48.com/wp-content/uploads/2024/01/tim-1.jpg"
+              alt="Tim Sullivan"
+            />
+            <h3 class="text-lg font-semibold text-center">Tim Sullivan</h3>
+            <p class="text-sm text-gray-600 text-center">
+              Dean of the Business School at Carroll University
+            </p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <img
+              class="h-36 w-36 rounded-full mx-auto"
+              src="https://forward48.com/wp-content/uploads/2024/01/Dr.-Del-O-min.jpg"
+              alt="Dr. Bola Delano-Oriaran"
+            />
+            <h3 class="text-lg font-semibold text-center">
+              Dr. Bola Delano-Oriaran
+            </h3>
+            <p class="text-sm text-gray-600 text-center">
+              Dean at St. Norbert College
+            </p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <img
+              class="h-36 w-36 rounded-full mx-auto"
+              src="https://forward48.com/wp-content/uploads/2023/12/jack-2.jpg"
+              alt="Jack Salzwedel"
+            />
+            <h3 class="text-lg font-semibold text-center">Jack Salzwedel</h3>
+            <p class="text-sm text-gray-600 text-center">
+              Board Chair at American Family Insurance
+            </p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <img
+              class="h-36 w-36 rounded-full mx-auto"
+              src="https://forward48.com/wp-content/uploads/2024/01/Dr-Timothy-Fair.jpg"
+              alt="Dr. Timothy J. Fair"
+            />
+            <h3 class="text-lg font-semibold text-center">
+              Dr. Timothy J. Fair
+            </h3>
+            <p class="text-sm text-gray-600 text-center">
+              Vice President for Inclusion & Diversity at Ruhrgarnstores Inc.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
-    <!-- New section -->
-    <section class="min-h-screen">
-      <div class="h-full w-full text-center flex justify-center items-center">
-        <h2 class="text-4xl">New Section</h2>
+
+    <section class="min-h-screen flex justify-center items-center py-10">
+      <div class="max-w-[133rem] mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 overflow-hidden gap-12">
+          <div class="text-left h-full w-full pt-3">
+            <div class="flex flex-col gap-3">
+              <h1 class="text-4xl font-bold">Our Six Week Program</h1>
+              <p>
+                Unprecedented Access. Authentic Connections. Unforgettable
+                Experience. With both established and emerging leaders selected,
+                we meet weekly for six weeks. Each weekly session is designed
+                around one faculty member, starting with one hour facilitated
+                and led by them. Afterward, emerging leaders break into small
+                groups for the second hour to discuss the content of the day,
+                making applications and sharing what they learned. For the third
+                and final hour of the session, Home Teams gather together. Each
+                week, one individual takes a turn sharing a difficult personal
+                or professional issue with the group. Their team members ask
+                questions and weigh in to help them move forward or reach
+                resolution. The vulnerability of Home Teams form strong bonds
+                that last well beyond the six weeks—many choose to stay in touch
+                outside of the program.
+              </p>
+            </div>
+          </div>
+          <div class="h-full w-full">
+            <img
+              src="https://forward48.com/wp-content/uploads/2023/12/C0431.MP4.04_07_53_116.Still002.jpg"
+              alt=""
+              class="h-full w-[] object-cover"
+            />
+          </div>
+        </div>
+
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 overflow-hidden gap-12 pt-10"
+        >
+          <div class="h-full w-full">
+            <img
+              src="https://forward48.com/wp-content/uploads/2022/11/Forward48Lambeau-9.jpg"
+              alt=""
+              class="h-full w-[] object-cover"
+            />
+          </div>
+          <div class="text-left h-full w-full">
+            <div class="flex flex-col gap-3">
+              <h1 class="text-4xl font-bold">Our Six Week Program</h1>
+              <p>
+                Unprecedented Access. Authentic Connections. Unforgettable
+                Experience. With both established and emerging leaders selected,
+                we meet weekly for six weeks. Each weekly session is designed
+                around one faculty member, starting with one hour facilitated
+                and led by them. Afterward, emerging leaders break into small
+                groups for the second hour to discuss the content of the day,
+                making applications and sharing what they learned. For the third
+                and final hour of the session, Home Teams gather together. Each
+                week, one individual takes a turn sharing a difficult personal
+                or professional issue with the group. Their team members ask
+                questions and weigh in to help them move forward or reach
+                resolution. The vulnerability of Home Teams form strong bonds
+                that last well beyond the six weeks—many choose to stay in touch
+                outside of the program.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 overflow-hidden gap-12 pt-10"
+        >
+          <div class="text-left h-full w-full">
+            <div class="flex flex-col gap-3">
+              <h1 class="text-4xl font-bold">The First Six Weeks Timeline:</h1>
+              <p>
+                Unprecedented Access. Authentic Connections. Unforgettable
+                Experience. With both established and emerging leaders selected,
+                we meet weekly for six weeks. Each weekly session is designed
+                around one faculty member, starting with one hour facilitated
+                and led by them. Afterward, emerging leaders break into small
+                groups for the second hour to discuss the content of the day,
+                making applications and sharing what they learned. For the third
+                and final hour of the session, Home Teams gather together. Each
+                week, one individual takes a turn sharing a difficult personal
+                or professional issue with the group. Their team members ask
+                questions and weigh in to help them move forward or reach
+                resolution. The vulnerability of Home Teams form strong bonds
+                that last well beyond the six weeks—many choose to stay in touch
+                outside of the program.
+              </p>
+            </div>
+          </div>
+          <div class="h-full w-full">
+            <img
+              src="https://forward48.com/wp-content/uploads/2023/12/C0037.MP4.10_33_35_22.Still001-2.jpg"
+              alt=""
+              class="h-full w-[] object-cover"
+            />
+          </div>
+        </div>
+        <div class="text-center font-semibold pt-24">
+          <h1 class="text-4xl">
+            <span class="text-[#8B163D] tracking-wide">Flexible </span>
+            <span>Plans</span>
+          </h1>
+          <p
+            class="pt-4 text-xl text-gray-400 font-normal w-full px-8 md:w-full"
+          >
+            Choose a plan that works best for you and<br />
+            your team.
+          </p>
+        </div>
+        <div
+          class="pt-24 flex flex-row justify-center items-center w-full pb-24"
+        >
+          <!-- Basic Card -->
+          <div
+            class="w-96 p-8 bg-white text-center rounded-3xl pr-16 shadow-xl"
+          >
+            <h1 class="text-black font-semibold text-2xl">Basic</h1>
+            <p class="pt-2 tracking-wide">
+              <span class="text-gray-400 align-top">$ </span>
+              <span class="text-3xl font-semibold">10</span>
+              <span class="text-gray-400 font-medium">/ user</span>
+            </p>
+            <hr class="mt-4 border-1" />
+            <div class="pt-8">
+              <p class="font-semibold text-gray-400 text-left">
+                <span class="material-icons align-middle"> done </span>
+                <span class="pl-2">
+                  Get started with <span class="text-black">messaging</span>
+                </span>
+              </p>
+              <p class="font-semibold text-gray-400 text-left pt-5">
+                <span class="material-icons align-middle"> done </span>
+                <span class="pl-2">
+                  Flexible <span class="text-black">team meetings</span>
+                </span>
+              </p>
+              <p class="font-semibold text-gray-400 text-left pt-5">
+                <span class="material-icons align-middle"> done </span>
+                <span class="pl-2">
+                  <span class="text-black">5 TB</span> cloud storage
+                </span>
+              </p>
+
+              <a href="#" class="">
+                <p class="w-full py-4 bg-[#8B163D] mt-8 rounded-xl text-white">
+                  <span class="font-medium"> Choose Plan </span>
+                </p>
+              </a>
+            </div>
+          </div>
+          <!-- StartUp Card -->
+          <div
+            class="w-80 p-8 bg-gray-900 text-center rounded-3xl text-white border-4 shadow-xl border-white transform scale-125"
+          >
+            <h1 class="text-white font-semibold text-2xl">Startup</h1>
+            <p class="pt-2 tracking-wide">
+              <span class="text-gray-400 align-top">$ </span>
+              <span class="text-3xl font-semibold">24</span>
+              <span class="text-gray-400 font-medium">/ user</span>
+            </p>
+            <hr class="mt-4 border-1 border-gray-600" />
+            <div class="pt-8">
+              <p class="font-semibold text-gray-400 text-left">
+                <span class="material-icons align-middle"> done </span>
+                <span class="pl-2">
+                  All features in <span class="text-white">Basic</span>
+                </span>
+              </p>
+              <p class="font-semibold text-gray-400 text-left pt-5">
+                <span class="material-icons align-middle"> done </span>
+                <span class="pl-2">
+                  Flexible <span class="text-white">call scheduling</span>
+                </span>
+              </p>
+              <p class="font-semibold text-gray-400 text-left pt-5">
+                <span class="material-icons align-middle"> done </span>
+                <span class="pl-2">
+                  <span class="text-white">15 TB</span> cloud storage
+                </span>
+              </p>
+
+              <a href="#" class="">
+                <p class="w-full py-4 bg-[#8B163D] mt-8 rounded-xl text-white">
+                  <span class="font-medium"> Choose Plan </span>
+                </p>
+              </a>
+            </div>
+            <div class="absolute top-4 right-4">
+              <p
+                class="bg-[#8B163D] font-semibold px-4 py-1 rounded-full uppercase text-xs"
+              >
+                Popular
+              </p>
+            </div>
+          </div>
+          <!-- Enterprise Card -->
+          <div
+            class="w-96 p-8 bg-white text-center rounded-3xl pl-16 shadow-xl"
+          >
+            <h1 class="text-black font-semibold text-2xl">Enterprise</h1>
+            <p class="pt-2 tracking-wide">
+              <span class="text-gray-400 align-top">$ </span>
+              <span class="text-3xl font-semibold">35</span>
+              <span class="text-gray-400 font-medium">/ user</span>
+            </p>
+            <hr class="mt-4 border-1" />
+            <div class="pt-8">
+              <p class="font-semibold text-gray-400 text-left">
+                <span class="material-icons align-middle"> done </span>
+                <span class="pl-2">
+                  All features in <span class="text-black">Startup</span>
+                </span>
+              </p>
+              <p class="font-semibold text-gray-400 text-left pt-5">
+                <span class="material-icons align-middle"> done </span>
+                <span class="pl-2">
+                  Growth <span class="text-black">oriented</span>
+                </span>
+              </p>
+              <p class="font-semibold text-gray-400 text-left pt-5">
+                <span class="material-icons align-middle"> done </span>
+                <span class="pl-2">
+                  <span class="text-black">Unlimited</span> cloud storage
+                </span>
+              </p>
+
+              <a href="#" class="">
+                <p class="w-full py-4 bg-[#8B163D] mt-8 rounded-xl text-white">
+                  <span class="font-medium"> Choose Plan </span>
+                </p>
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
+
+    <section class="bg-gray-100 py-16 relative overflow-hidden min-h-screen">
+      <div class="max-w-[133rem] mx-auto px-4 sm:px-6 lg:px-8">
+        <h1 class="text-4xl font-bold text-center text-[#8B163D]">
+          Don't Just Take Our Word For It,
+        </h1>
+        <h1 class="text-4xl font-bold text-gray-800 text-center mb-12">
+          Hear What Our Alumni's Have to Say:
+        </h1>
+        <div class="flex flex-col gap-8">
+          <div class="testimonial-loop flex animate-loop-right">
+            <div
+              class="testimonial-item flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-4"
+            >
+              <div class="bg-white rounded-lg shadow-md p-6">
+                <div class="flex items-center mb-4">
+                  <img
+                    class="h-16 w-16 rounded-full mr-4"
+                    src="https://randomuser.me/api/portraits/men/1.jpg"
+                    alt="Maciej Pietruszak"
+                  />
+                  <div>
+                    <h3 class="text-lg font-semibold text-gray-800">
+                      Maciej (Matt) Pietruszak
+                    </h3>
+                    <p class="text-gray-600">Quarles & Brady | Partner</p>
+                  </div>
+                </div>
+                <p class="text-gray-600">
+                  "I think seeking to understand and being self-aware were a key
+                  part of the program for me. A great reminder and lesson to be
+                  aware of preconceived notions and that we never know where
+                  people come from, who they are, what is going on in their
+                  lives, and what their motivations are until we seek to
+                  understand from them."
+                </p>
+              </div>
+            </div>
+            <div
+              class="testimonial-item flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-4"
+            >
+              <div class="bg-white rounded-lg shadow-md p-6">
+                <div class="flex items-center mb-4">
+                  <img
+                    class="h-16 w-16 rounded-full mr-4"
+                    src="https://randomuser.me/api/portraits/men/2.jpg"
+                    alt="John Childester"
+                  />
+                  <div>
+                    <h3 class="text-lg font-semibold text-gray-800">
+                      John Childester
+                    </h3>
+                    <p class="text-gray-600">
+                      Johnson Financial Group | Senior Vice President
+                    </p>
+                  </div>
+                </div>
+                <p class="text-gray-600">
+                  "Forward 48 gives you the tools, mentors and resources to
+                  grow. It helps you build a foundation for yourself amongst a
+                  group of diverse individuals."
+                </p>
+              </div>
+            </div>
+            <div
+              class="testimonial-item flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-4"
+            >
+              <div class="bg-white rounded-lg shadow-md p-6">
+                <div class="flex items-center mb-4">
+                  <img
+                    class="h-16 w-16 rounded-full mr-4"
+                    src="https://randomuser.me/api/portraits/men/3.jpg"
+                    alt="Devin White"
+                  />
+                  <div>
+                    <h3 class="text-lg font-semibold text-gray-800">
+                      Devin White
+                    </h3>
+                    <p class="text-gray-600">JP Cullen | Project Manager</p>
+                  </div>
+                </div>
+                <p class="text-gray-600">
+                  "This group expanded my network and opened my mind to the
+                  untapped tools and resources in Milwaukee that will allow us
+                  to grow together and create a better community."
+                </p>
+              </div>
+            </div>
+            <div
+              class="testimonial-item flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-4"
+            >
+              <div class="bg-white rounded-lg shadow-md p-6">
+                <div class="flex items-center mb-4">
+                  <img
+                    class="h-16 w-16 rounded-full mr-4"
+                    src="https://randomuser.me/api/portraits/women/1.jpg"
+                    alt="Katie Poudnoky"
+                  />
+                  <div>
+                    <h3 class="text -lg font-semibold text-gray-800">
+                      Katie Poudnoky
+                    </h3>
+                    <p class="text-gray-600">
+                      Baird | Managing Director Strategic Initiatives
+                    </p>
+                  </div>
+                </div>
+                <p class="text-gray-600">
+                  "I am grateful for the opportunity to connect and learn from
+                  so many diverse leaders representing multiple different
+                  industries and career paths in Milwaukee."
+                </p>
+              </div>
+            </div>
+            <div
+              class="testimonial-item flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-4"
+            >
+              <div class="bg-white rounded-lg shadow-md p-6">
+                <div class="flex items-center mb-4">
+                  <img
+                    class="h-16 w-16 rounded-full mr-4"
+                    src="https://randomuser.me/api/portraits/men/4.jpg"
+                    alt="John Smith"
+                  />
+                  <div>
+                    <h3 class="text-lg font-semibold text-gray-800">
+                      John Smith
+                    </h3>
+                    <p class="text-gray-600">ABC Company | CEO</p>
+                  </div>
+                </div>
+                <p class="text-gray-600">
+                  "The program helped me gain valuable insights into leadership
+                  and diversity, which have been extremely beneficial in my role
+                  as CEO."
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-loop flex animate-loop-left">
+            <div
+              class="testimonial-item flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-4"
+            >
+              <div class="bg-white rounded-lg shadow-md p-6">
+                <div class="flex items-center mb-4">
+                  <img
+                    class="h-16 w-16 rounded-full mr-4"
+                    src="https://randomuser.me/api/portraits/men/5.jpg"
+                    alt="Michael Brown"
+                  />
+                  <div>
+                    <h3 class="text-lg font-semibold text-gray-800">
+                      Michael Brown
+                    </h3>
+                    <p class="text-gray-600">Tech Startup | CTO</p>
+                  </div>
+                </div>
+                <p class="text-gray-600">
+                  "As a CTO, participating in this program has been an
+                  eye-opening experience. It has helped me better understand the
+                  importance of diversity and inclusion in building successful
+                  teams and innovative products."
+                </p>
+              </div>
+            </div>
+            <div
+              class="testimonial-item flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-4"
+            >
+              <div class="bg-white rounded-lg shadow-md p-6">
+                <div class="flex items-center mb-4">
+                  <img
+                    class="h-16 w-16 rounded-full mr-4"
+                    src="https://randomuser.me/api/portraits/women/3.jpg"
+                    alt="Emily Davis"
+                  />
+                  <div>
+                    <h3 class="text-lg font-semibold text-gray-800">
+                      Emily Davis
+                    </h3>
+                    <p class="text-gray-600">
+                      Nonprofit Organization | Executive Director
+                    </p>
+                  </div>
+                </div>
+                <p class="text-gray-600">
+                  "The connections and insights gained through this program have
+                  been invaluable in helping our organization better serve our
+                  diverse community and achieve our mission."
+                </p>
+              </div>
+            </div>
+            <div
+              class="testimonial-item flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-4"
+            >
+              <div class="bg-white rounded-lg shadow-md p-6">
+                <div class="flex items-center mb-4">
+                  <img
+                    class="h-16 w-16 rounded-full mr-4"
+                    src="https://randomuser.me/api/portraits/men/6.jpg"
+                    alt="David Wilson"
+                  />
+                  <div>
+                    <h3 class="text-lg font-semibold text-gray-800">
+                      David Wilson
+                    </h3>
+                    <p class="text-gray-600">
+                      Finance Company | VP of Operations
+                    </p>
+                  </div>
+                </div>
+                <p class="text-gray-600">
+                  "This program has been instrumental in helping me foster a
+                  more inclusive and productive work environment, which has had
+                  a positive impact on our overall operations and bottom line."
+                </p>
+              </div>
+            </div>
+            <div
+              class="testimonial-item flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-4"
+            >
+              <div class="bg-white rounded-lg shadow-md p-6">
+                <div class="flex items-center mb-4">
+                  <img
+                    class="h-16 w-16 rounded-full mr-4"
+                    src="https://randomuser.me/api/portraits/women/4.jpg"
+                    alt="Jessica Thompson"
+                  />
+                  <div>
+                    <h3 class="text-lg font-semibold text-gray-800">
+                      Jessica Thompson
+                    </h3>
+                    <p class="text-gray-600">Law Firm | Senior Associate</p>
+                  </div>
+                </div>
+                <p class="text-gray-600">
+                  "As a legal professional, the insights gained from this
+                  program have been invaluable in helping me better understand
+                  and serve clients from diverse backgrounds and perspectives."
+                </p>
+              </div>
+            </div>
+            <div
+              class="testimonial-item flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-4"
+            >
+              <div class="bg-white rounded-lg shadow-md p-6">
+                <div class="flex items-center mb-4">
+                  <img
+                    class="h-16 w-16 rounded-full mr-4"
+                    src="https://randomuser.me/api/portraits/women/2.jpg"
+                    alt="Sarah Johnson"
+                  />
+                  <div>
+                    <h3 class="text-lg font-semibold text-gray-800">
+                      Sarah Johnson
+                    </h3>
+                    <p class="text-gray-600">
+                      XYZ Corp | Director of Marketing
+                    </p>
+                  </div>
+                </div>
+                <p class="text-gray-600">
+                  "The diverse perspectives and experiences shared in this
+                  program have been invaluable in shaping my approach to
+                  marketing and connecting with our target audience."
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="absolute inset-0 pointer-events-none">
+        <div
+          class="absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-gray-100 to-transparent"
+        ></div>
+        <div
+          class="absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-gray-100 to-transparent"
+        ></div>
+      </div>
+    </section>
+
+    <footer class="bg-white shadow-lg dark:bg-white">
+      <div class="max-w-[133rem] mx-auto p-7 sm:px-6 lg:px-8">
+        <div class="sm:flex sm:items-center sm:justify-between">
+          <a
+            href="https://flowbite.com/"
+            class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse"
+          >
+            <img
+              src="https://forward48.com/wp-content/uploads/2022/09/5f6b874fbb97e55b61db0edb_Asset-1.png"
+              class="h-10"
+              alt="Flowbite Logo"
+            />
+          </a>
+          <p>207 E. Michigan St., Milwaukee, WI 53202</p>
+        </div>
+        <hr
+          class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8"
+        />
+        <span class="block text-sm text-black sm:text-center dark:text-black"
+          >© 2024
+          <a href="https://flowbite.com/" class="hover:underline">Forward48™</a
+          >. All Rights Reserved.</span
+        >
+      </div>
+    </footer>
+    <script src="https://player.vimeo.com/api/player.js"></script>
     <script>
       !(function (a) {
         var b =
