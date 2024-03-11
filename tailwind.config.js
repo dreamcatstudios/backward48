@@ -6,6 +6,9 @@ module.exports = {
       animation: {
         "infinite-scroll": "infinite-scroll 25s linear infinite",
       },
+      colors: {
+        primaryColor: "#8B163D",
+      },
     },
   },
   plugins: [require("@tailwindcss/aspect-ratio")],
