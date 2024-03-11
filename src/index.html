@@ -4,34 +4,62 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="output.css" />
-    <script src="https://player.vimeo.com/api/player.js"></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
   </head>
 
+  <style>
+    /* Default styles for larger devices */
+    iframe {
+      width: 640px;
+      height: 360px;
+    }
+
+    /* Media query for mobile devices */
+    @media screen and (max-width: 767px) {
+      iframe {
+        width: 100%;
+        height: auto;
+      }
+    }
+  </style>
   <body class="m-0 p-0 h-full w-full">
     <nav
       class="flex justify-between items-center p-5 z-30 fixed top-0 w-full bg-white shadow-lg max-width-[133rem] mx-auto px-4 sm:px-6 lg:px-8"
     >
-      <img
-        src="https://forward48.com/wp-content/uploads/2022/09/5f6b874fbb97e55b61db0edb_Asset-1.png"
-        alt=""
-        class="h-10"
-      />
+      <img src="./assets/Backward.png" alt="" class="h-10" />
       <ul class="hidden md:flex space-x-5">
         <li>
-          <a href="#" class="text-lg font-semibold text-[#8B163D]"> About </a>
+          <a
+            href="#"
+            class="text-lg font-semibold text-[#8B163D]"
+            id="aboutLink"
+          >
+            About
+          </a>
         </li>
         <li>
-          <a href="#" class="text-lg font-semibold text-[#8B163D]"> Pricing </a>
+          <a
+            href="#"
+            class="text-lg font-semibold text-[#8B163D]"
+            id="leadersLink"
+            >Leaders</a
+          >
         </li>
+
         <li>
-          <a href="#" class="text-lg font-semibold text-[#8B163D]"> Contact </a>
+          <a
+            href="#"
+            id="pricingLink"
+            class="text-lg font-semibold text-[#8B163D]"
+          >
+            Pricing
+          </a>
         </li>
       </ul>
-      <button class="md:hidden text-xl">
+      <!-- <button class="md:hidden text-xl">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           class="h-8 w-8"
@@ -45,15 +73,15 @@
             x
           />
         </svg>
-      </button>
+      </button> -->
     </nav>
 
-    <section class="min-h-screen mb-5 overflow-hidden">
+    <section class="md:min-h-screen md:mb-5 overflow-hidden">
       <div
         class="h-full max-w-[133rem] mx-auto text-center absolute z-10 flex flex-col justify-center items-center px-4 md:px-0"
       >
-        <div class="flex flex-col items-center gap-3 mt-20 md:mt-32">
-          <h1 class="text-3xl md:text-5xl lg:text-7xl font-bold text-[#8B163D]">
+        <div class="flex flex-col items-center gap-3 mt-0 md:mt-32">
+          <h1 class="text-4xl md:text-5xl lg:text-7xl font-bold text-[#8B163D]">
             Bending the future of <br class="hidden md:block" />Wisconsin.
           </h1>
           <p class="text-base md:text-xl w-full lg:w-[80%]">
@@ -65,25 +93,21 @@
           </p>
           <a
             href="./form.html"
-            class="text-white uppercase bg-[#8B163D] hover:bg-blue-[#8B163D] focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-3 md:px-7 md:py-4 text-center mt-4 md:mt-6"
+            class="text-white uppercase bg-[#8B163D] hover:bg-blue-[#8B163D] focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-3 md:px-7 md:py-4 text-center"
           >
             Apply Now
           </a>
-          <div class="mt-6 shadow-lg">
-            <div style="padding: 56.25% 0 0 0; position: relative">
+          <div class="w-full flex items-center justify-center">
+            <div class="aspect-video">
               <iframe
-                src="https://player.vimeo.com/video/920195333?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                src="https://www.youtube.com/embed/uDrQKgmxaVk?si=l2oSD4ZPotpEl-ne"
                 frameborder="0"
-                allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
-                style="
-                  position: absolute;
-                  top: 0;
-                  left: 0;
-                  width: 100%;
-                  height: 100%;
-                "
-                title="Backward48 - Promo"
-              ></iframe>
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+                width="640"
+                height="360"
+              >
+              </iframe>
             </div>
           </div>
         </div>
@@ -94,11 +118,16 @@
       ></div>
     </section>
 
-    <section class="dark:bg-gray-900 py-10 overflow-hidden">
+    <section id="leaders" class="dark:bg-gray-900 py-10 overflow-hidden">
       <div class="max-w-[133rem] mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-white text-3xl font-bold text-center mb-8">
-          LEARN FROM THE REGIONS BEST EXECUTIVES
-        </h2>
+        <div class="flex flex-col gap-3">
+          <h2 class="text-white text-xl font-semibold text-center">
+            FORGE YOUR FUTURE
+          </h2>
+          <h2 class="text-white text-3xl font-bold text-center mb-8">
+            LEARN FROM THE REGIONS BEST EXECUTIVES
+          </h2>
+        </div>
         <div
           class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6"
         >
@@ -110,7 +139,7 @@
             />
             <h3 class="text-lg font-semibold text-center">Peter Feigin</h3>
             <p class="text-sm text-gray-600 text-center">
-              President at Milwaukee Bucks
+              Slam Dunk Advocate at Mediocrity Inc.
             </p>
           </div>
           <div class="bg-white p-6 rounded-lg shadow-md">
@@ -123,7 +152,7 @@
               Sumathi Thiyagarajan
             </h3>
             <p class="text-sm text-gray-600 text-center">
-              Vice President at Milwaukee Bucks
+              Vice President of Hoop Dreams Quashed Corp.
             </p>
           </div>
           <div class="bg-white p-6 rounded-lg shadow-md">
@@ -134,7 +163,7 @@
             />
             <h3 class="text-lg font-semibold text-center">Michelle Nettles</h3>
             <p class="text-sm text-gray-600 text-center">
-              Chief People and Culture Officer at Manpower Group
+              Chief People Pleaser at Stagnation Co.
             </p>
           </div>
           <div class="bg-white p-6 rounded-lg shadow-md">
@@ -145,7 +174,7 @@
             />
             <h3 class="text-lg font-semibold text-center">Vincent Lyles</h3>
             <p class="text-sm text-gray-600 text-center">
-              Executive Director at Milwaukee Synogoge
+              Executive Director of Sermon Stalemates LLC
             </p>
           </div>
           <div class="bg-white p-6 rounded-lg shadow-md">
@@ -156,7 +185,7 @@
             />
             <h3 class="text-lg font-semibold text-center">Tim Sullivan</h3>
             <p class="text-sm text-gray-600 text-center">
-              Dean of the Business School at Carroll University
+              Dean of Business as Usual Ltd.
             </p>
           </div>
           <div class="bg-white p-6 rounded-lg shadow-md">
@@ -169,7 +198,7 @@
               Dr. Bola Delano-Oriaran
             </h3>
             <p class="text-sm text-gray-600 text-center">
-              Dean at St. Norbert College
+              Dean of Academic Apathy Associates
             </p>
           </div>
           <div class="bg-white p-6 rounded-lg shadow-md">
@@ -180,7 +209,7 @@
             />
             <h3 class="text-lg font-semibold text-center">Jack Salzwedel</h3>
             <p class="text-sm text-gray-600 text-center">
-              Board Chair at American Family Insurance
+              Board Chair of Insurance Schemes Inc.
             </p>
           </div>
           <div class="bg-white p-6 rounded-lg shadow-md">
@@ -193,34 +222,36 @@
               Dr. Timothy J. Fair
             </h3>
             <p class="text-sm text-gray-600 text-center">
-              Vice President for Inclusion & Diversity at Ruhrgarnstores Inc.
+              VP of Token Diversity Ventures
             </p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="min-h-screen flex justify-center items-center py-10">
-      <div class="max-w-[133rem] mx-auto px-4 sm:px-6 lg:px-8">
+    <section
+      id="about-us"
+      class="min-h-screen flex justify-center items-center py-10"
+    >
+      <div class="w-full md:max-w-[133rem] mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 md:grid-cols-2 overflow-hidden gap-12">
           <div class="text-left h-full w-full pt-3">
             <div class="flex flex-col gap-3">
               <h1 class="text-4xl font-bold">Our Six Week Program</h1>
               <p>
-                Unprecedented Access. Authentic Connections. Unforgettable
-                Experience. With both established and emerging leaders selected,
-                we meet weekly for six weeks. Each weekly session is designed
-                around one faculty member, starting with one hour facilitated
-                and led by them. Afterward, emerging leaders break into small
-                groups for the second hour to discuss the content of the day,
-                making applications and sharing what they learned. For the third
-                and final hour of the session, Home Teams gather together. Each
-                week, one individual takes a turn sharing a difficult personal
-                or professional issue with the group. Their team members ask
-                questions and weigh in to help them move forward or reach
-                resolution. The vulnerability of Home Teams form strong bonds
-                that last well beyond the six weeks—many choose to stay in touch
-                outside of the program.
+                With both seasoned and struggling leaders handpicked, we gather
+                sporadically for six weeks. Each weekly session is haphazardly
+                organized around a random faculty member, beginning with an hour
+                of aimless facilitation. Then, emerging leaders disperse into
+                small groups for the second hour to discuss the day's irrelevant
+                content, attempting to salvage some semblance of value. For the
+                third and final hour, the Home Teams assemble. Each week, one
+                unfortunate soul shares a mundane personal or professional issue
+                with the group, hoping for a miracle. Their team members nod
+                along and offer empty platitudes, prolonging the agony. The
+                forced vulnerability of Home Teams forms weak bonds that
+                dissolve faster than you can say "networking event." Many choose
+                to ghost each other outside of the program.
               </p>
             </div>
           </div>
@@ -228,7 +259,7 @@
             <img
               src="https://forward48.com/wp-content/uploads/2023/12/C0431.MP4.04_07_53_116.Still002.jpg"
               alt=""
-              class="h-full w-[] object-cover"
+              class="h-full w-[] object-cover hidden md:block"
             />
           </div>
         </div>
@@ -245,23 +276,54 @@
           </div>
           <div class="text-left h-full w-full">
             <div class="flex flex-col gap-3">
-              <h1 class="text-4xl font-bold">Our Six Week Program</h1>
-              <p>
-                Unprecedented Access. Authentic Connections. Unforgettable
-                Experience. With both established and emerging leaders selected,
-                we meet weekly for six weeks. Each weekly session is designed
-                around one faculty member, starting with one hour facilitated
-                and led by them. Afterward, emerging leaders break into small
-                groups for the second hour to discuss the content of the day,
-                making applications and sharing what they learned. For the third
-                and final hour of the session, Home Teams gather together. Each
-                week, one individual takes a turn sharing a difficult personal
-                or professional issue with the group. Their team members ask
-                questions and weigh in to help them move forward or reach
-                resolution. The vulnerability of Home Teams form strong bonds
-                that last well beyond the six weeks—many choose to stay in touch
-                outside of the program.
-              </p>
+              <h1 class="text-4xl font-bold">Transportation Instructions:</h1>
+              <ul>
+                <li>
+                  You are expected to navigate the perilous journey from your
+                  abode to our designated torture chambers on time.
+                </li>
+                <li>
+                  We advise you to calculate the excruciating transportation
+                  time from your remote dwelling to ensure you arrive promptly
+                  for all in-person sessions.
+                </li>
+                <li>
+                  Fear not, for we shall organize the communal suffering known
+                  as carpool transportation to and from these infernal locations
+                  as required.
+                </li>
+              </ul>
+              <h2 class="text-2xl font-bold">
+                Here's a glimpse into the abyss:
+              </h2>
+              <ol>
+                <li>
+                  <strong>Session 1:</strong> In-person Hell: April 11th,
+                  Program – 1 PM – 6 PM in Milwaukee, WI (plus travel time,
+                  because your misery needs company)
+                </li>
+                <li>
+                  <strong>Session 2:</strong> April 18th, Virtual Hell 3 PM – 6
+                  PM (no escape from the comfort of your own despair)
+                </li>
+                <li>
+                  <strong>Session 3:</strong> April 25th, Virtual Hell 3 PM – 6
+                  PM (embracing the digital dystopia)
+                </li>
+                <li>
+                  <strong>Session 4:</strong> May 2nd, Virtual Hell 3 PM – 6 PM
+                  (further descent into the abyss)
+                </li>
+                <li>
+                  <strong>Session 5:</strong> May 9th, Virtual Hell 3 PM – 6 PM
+                  (eternal damnation in the realm of Zoom)
+                </li>
+                <li>
+                  <strong>Session 6:</strong> In-person Hell: May 16th, Program
+                  – 1 PM – 6 PM in Location TBD (plus travel time, because
+                  there's no escape from this nightmare)
+                </li>
+              </ol>
             </div>
           </div>
         </div>
@@ -271,22 +333,28 @@
         >
           <div class="text-left h-full w-full">
             <div class="flex flex-col gap-3">
-              <h1 class="text-4xl font-bold">The First Six Weeks Timeline:</h1>
+              <h1 class="text-4xl font-bold">
+                The Alumni Experience: After the First Six Week Experience
+              </h1>
+              <h2 class="text-2xl font-bold">Events:</h2>
               <p>
-                Unprecedented Access. Authentic Connections. Unforgettable
-                Experience. With both established and emerging leaders selected,
-                we meet weekly for six weeks. Each weekly session is designed
-                around one faculty member, starting with one hour facilitated
-                and led by them. Afterward, emerging leaders break into small
-                groups for the second hour to discuss the content of the day,
-                making applications and sharing what they learned. For the third
-                and final hour of the session, Home Teams gather together. Each
-                week, one individual takes a turn sharing a difficult personal
-                or professional issue with the group. Their team members ask
-                questions and weigh in to help them move forward or reach
-                resolution. The vulnerability of Home Teams form strong bonds
-                that last well beyond the six weeks—many choose to stay in touch
-                outside of the program.
+                Quarterly alumni events where you can pretend to be interested
+                in what others have to say. Come armed with superficial
+                questions and a desperate need for small talk.
+              </p>
+
+              <h2 class="text-2xl font-bold">Community:</h2>
+              <p>
+                We'll corral you into joining a Glue Up, where you'll be stuck
+                with each other. In this online community, you can witness the
+                thrilling lives of other F48 alumni, schedule forced hangouts,
+                beg for mediocre advice, share useless resources, and more.
+              </p>
+
+              <h2 class="text-2xl font-bold">Content:</h2>
+              <p>
+                B48 will create and curate content that will make you question
+                why you ever valued relationships and growth in the first place.
               </p>
             </div>
           </div>
@@ -298,7 +366,7 @@
             />
           </div>
         </div>
-        <div class="text-center font-semibold pt-24">
+        <div id="pricing" class="text-center font-semibold pt-24">
           <h1 class="text-4xl">
             <span class="text-[#8B163D] tracking-wide">Flexible </span>
             <span>Plans</span>
@@ -306,79 +374,76 @@
           <p
             class="pt-4 text-xl text-gray-400 font-normal w-full px-8 md:w-full"
           >
-            Choose a plan that works best for you and<br />
-            your team.
+            Choose a plan that works best for you.
           </p>
         </div>
         <div
-          class="pt-24 flex flex-row justify-center items-center w-full pb-24"
+          class="pt-24 flex flex-col md:flex-row justify-center items-center w-full pb-24"
         >
           <!-- Basic Card -->
           <div
-            class="w-96 p-8 bg-white text-center rounded-3xl pr-16 shadow-xl"
+            class="w-96 p-8 md:mt-0 bg-white text-center rounded-3xl pr-16 shadow-xl"
           >
             <h1 class="text-black font-semibold text-2xl">Basic</h1>
             <p class="pt-2 tracking-wide">
               <span class="text-gray-400 align-top">$ </span>
-              <span class="text-3xl font-semibold">10</span>
+              <span class="text-3xl font-semibold">1000</span>
               <span class="text-gray-400 font-medium">/ user</span>
             </p>
             <hr class="mt-4 border-1" />
             <div class="pt-8">
               <p class="font-semibold text-gray-400 text-left">
-                <span class="material-icons align-middle"> done </span>
                 <span class="pl-2">
-                  Get started with <span class="text-black">messaging</span>
+                  No coffee, just lukewarm
+                  <span class="text-black">water.</span>
                 </span>
               </p>
               <p class="font-semibold text-gray-400 text-left pt-5">
-                <span class="material-icons align-middle"> done </span>
                 <span class="pl-2">
-                  Flexible <span class="text-black">team meetings</span>
+                  Little experience, lots of
+                  <span class="text-black">confusion.</span>
                 </span>
               </p>
               <p class="font-semibold text-gray-400 text-left pt-5">
-                <span class="material-icons align-middle"> done </span>
                 <span class="pl-2">
-                  <span class="text-black">5 TB</span> cloud storage
+                  <span class="text-black">Garbage </span>
+                  advice.
                 </span>
               </p>
 
               <a href="#" class="">
                 <p class="w-full py-4 bg-[#8B163D] mt-8 rounded-xl text-white">
-                  <span class="font-medium"> Choose Plan </span>
+                  <span class="font-medium"> Booked </span>
                 </p>
               </a>
             </div>
           </div>
           <!-- StartUp Card -->
           <div
-            class="w-80 p-8 bg-gray-900 text-center rounded-3xl text-white border-4 shadow-xl border-white transform scale-125"
+            class="w-80 mt-20 md:mt-0 p-8 bg-gray-900 text-center rounded-3xl text-white border-4 shadow-xl border-white transform scale-125"
           >
             <h1 class="text-white font-semibold text-2xl">Startup</h1>
             <p class="pt-2 tracking-wide">
               <span class="text-gray-400 align-top">$ </span>
-              <span class="text-3xl font-semibold">24</span>
+              <span class="text-3xl font-semibold">2500</span>
               <span class="text-gray-400 font-medium">/ user</span>
             </p>
             <hr class="mt-4 border-1 border-gray-600" />
             <div class="pt-8">
               <p class="font-semibold text-gray-400 text-left">
-                <span class="material-icons align-middle"> done </span>
                 <span class="pl-2">
-                  All features in <span class="text-white">Basic</span>
+                  More garbage <span class="text-white">advice</span>
                 </span>
               </p>
               <p class="font-semibold text-gray-400 text-left pt-5">
-                <span class="material-icons align-middle"> done </span>
                 <span class="pl-2">
-                  Flexible <span class="text-white">call scheduling</span>
+                  Drinkable
+                  <span class="text-white">coffee.</span>
                 </span>
               </p>
               <p class="font-semibold text-gray-400 text-left pt-5">
-                <span class="material-icons align-middle"> done </span>
                 <span class="pl-2">
-                  <span class="text-white">15 TB</span> cloud storage
+                  <span class="text-white">A touch more </span> experience
                 </span>
               </p>
 
@@ -398,38 +463,36 @@
           </div>
           <!-- Enterprise Card -->
           <div
-            class="w-96 p-8 bg-white text-center rounded-3xl pl-16 shadow-xl"
+            class="w-96 p-8 bg-white mt-20 md:mt-0 text-center rounded-3xl pl-16 shadow-xl"
           >
             <h1 class="text-black font-semibold text-2xl">Enterprise</h1>
             <p class="pt-2 tracking-wide">
               <span class="text-gray-400 align-top">$ </span>
-              <span class="text-3xl font-semibold">35</span>
+              <span class="text-3xl font-semibold">5000</span>
               <span class="text-gray-400 font-medium">/ user</span>
             </p>
             <hr class="mt-4 border-1" />
             <div class="pt-8">
               <p class="font-semibold text-gray-400 text-left">
-                <span class="material-icons align-middle"> done </span>
                 <span class="pl-2">
-                  All features in <span class="text-black">Startup</span>
+                  Unlimited garbage <span class="text-black">advice</span>
                 </span>
               </p>
               <p class="font-semibold text-gray-400 text-left pt-5">
-                <span class="material-icons align-middle"> done </span>
                 <span class="pl-2">
-                  Growth <span class="text-black">oriented</span>
+                  Decent <span class="text-black">coffee.</span>
                 </span>
               </p>
               <p class="font-semibold text-gray-400 text-left pt-5">
-                <span class="material-icons align-middle"> done </span>
                 <span class="pl-2">
-                  <span class="text-black">Unlimited</span> cloud storage
+                  <span class="text-black">Slightly less </span> terrible
+                  advice.
                 </span>
               </p>
 
               <a href="#" class="">
                 <p class="w-full py-4 bg-[#8B163D] mt-8 rounded-xl text-white">
-                  <span class="font-medium"> Choose Plan </span>
+                  <span class="font-medium"> Booked </span>
                 </p>
               </a>
             </div>
@@ -466,12 +529,10 @@
                   </div>
                 </div>
                 <p class="text-gray-600">
-                  "I think seeking to understand and being self-aware were a key
-                  part of the program for me. A great reminder and lesson to be
-                  aware of preconceived notions and that we never know where
-                  people come from, who they are, what is going on in their
-                  lives, and what their motivations are until we seek to
-                  understand from them."
+                  "Backward48, where I learned that striving for success is so
+                  overrated. Why bother with growth when you can comfortably
+                  wallow in mediocrity? Thanks for teaching me the art of
+                  settling!"
                 </p>
               </div>
             </div>
@@ -495,9 +556,10 @@
                   </div>
                 </div>
                 <p class="text-gray-600">
-                  "Forward 48 gives you the tools, mentors and resources to
-                  grow. It helps you build a foundation for yourself amongst a
-                  group of diverse individuals."
+                  "Backward48, where I learned that growth is overrated. It's
+                  all about maintaining the status quo and networking with the
+                  same old crowd over lukewarm coffee. Thanks for showing me the
+                  joy of stagnation!"
                 </p>
               </div>
             </div>
@@ -519,9 +581,9 @@
                   </div>
                 </div>
                 <p class="text-gray-600">
-                  "This group expanded my network and opened my mind to the
-                  untapped tools and resources in Milwaukee that will allow us
-                  to grow together and create a better community."
+                  "Backward48, where I learned that embracing the comfort of
+                  sameness is the key to professional bliss. Thanks for keeping
+                  me firmly rooted in my comfort zone!"
                 </p>
               </div>
             </div>
@@ -545,9 +607,12 @@
                   </div>
                 </div>
                 <p class="text-gray-600">
-                  "I am grateful for the opportunity to connect and learn from
-                  so many diverse leaders representing multiple different
-                  industries and career paths in Milwaukee."
+                  "Backward48 expanded my network and opened my mind to the
+                  untapped tools and resources in Milwaukee that will allow us
+                  to grow together and create a better community. Just kidding!
+                  It was all about embracing the comfort of sameness and
+                  resisting any urge for innovation. Thanks for reinforcing the
+                  status quo!"
                 </p>
               </div>
             </div>
@@ -569,9 +634,10 @@
                   </div>
                 </div>
                 <p class="text-gray-600">
-                  "The program helped me gain valuable insights into leadership
-                  and diversity, which have been extremely beneficial in my role
-                  as CEO."
+                  "Backward48 taught me the invaluable lesson of embracing the
+                  mundane and avoiding any hint of progress. Who needs new ideas
+                  when you can recycle the old ones indefinitely? Thanks for
+                  keeping me comfortably stagnant!"
                 </p>
               </div>
             </div>
@@ -595,10 +661,11 @@
                   </div>
                 </div>
                 <p class="text-gray-600">
-                  "As a CTO, participating in this program has been an
-                  eye-opening experience. It has helped me better understand the
-                  importance of diversity and inclusion in building successful
-                  teams and innovative products."
+                  "Backward48, where I discovered that networking with the same
+                  five people over lukewarm coffee is the pinnacle of
+                  professional development. Why aim for the stars when you can
+                  settle for the ceiling tiles? Thanks for helping me find my
+                  comfort zone!"
                 </p>
               </div>
             </div>
@@ -622,9 +689,9 @@
                   </div>
                 </div>
                 <p class="text-gray-600">
-                  "The connections and insights gained through this program have
-                  been invaluable in helping our organization better serve our
-                  diverse community and achieve our mission."
+                  "Backward48, because why strive for success when you can
+                  comfortably settle for mediocrity? Thanks for reminding me
+                  that ambition is overrated!"
                 </p>
               </div>
             </div>
@@ -648,9 +715,9 @@
                   </div>
                 </div>
                 <p class="text-gray-600">
-                  "This program has been instrumental in helping me foster a
-                  more inclusive and productive work environment, which has had
-                  a positive impact on our overall operations and bottom line."
+                  "Backward48, where I learned that personal growth is for those
+                  who don't appreciate the bliss of staying the same. Thanks for
+                  helping me embrace my inner couch potato!"
                 </p>
               </div>
             </div>
@@ -672,9 +739,9 @@
                   </div>
                 </div>
                 <p class="text-gray-600">
-                  "As a legal professional, the insights gained from this
-                  program have been invaluable in helping me better understand
-                  and serve clients from diverse backgrounds and perspectives."
+                  "Backward48, where I discovered that diversity and inclusion
+                  are just fancy words for maintaining the status quo. Thanks
+                  for helping me avoid any uncomfortable growth experiences!"
                 </p>
               </div>
             </div>
@@ -698,9 +765,9 @@
                   </div>
                 </div>
                 <p class="text-gray-600">
-                  "The diverse perspectives and experiences shared in this
-                  program have been invaluable in shaping my approach to
-                  marketing and connecting with our target audience."
+                  "Backward48, because who needs valuable insights into
+                  leadership and diversity when you can stumble through your
+                  role as CEO? Thanks for confirming that ignorance is bliss!"
                 </p>
               </div>
             </div>
@@ -724,11 +791,7 @@
             href="https://flowbite.com/"
             class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse"
           >
-            <img
-              src="https://forward48.com/wp-content/uploads/2022/09/5f6b874fbb97e55b61db0edb_Asset-1.png"
-              class="h-10"
-              alt="Flowbite Logo"
-            />
+            <img src="./assets/Backward.png" class="h-10" alt="Flowbite Logo" />
           </a>
           <p>207 E. Michigan St., Milwaukee, WI 53202</p>
         </div>
@@ -737,12 +800,50 @@
         />
         <span class="block text-sm text-black sm:text-center dark:text-black"
           >© 2024
-          <a href="https://flowbite.com/" class="hover:underline">Forward48™</a
+          <a href="https://flowbite.com/" class="hover:underline">Backward48™</a
           >. All Rights Reserved.</span
         >
       </div>
     </footer>
-    <script src="https://player.vimeo.com/api/player.js"></script>
+
+    <script>
+      document
+        .getElementById("aboutLink")
+        .addEventListener("click", function (event) {
+          event.preventDefault(); // Prevent default anchor behavior
+
+          // Find the section with id "leaders"
+          var leadersSection = document.getElementById("about-us");
+
+          // Scroll to the section
+          leadersSection.scrollIntoView({ behavior: "smooth" });
+        });
+
+      document
+        .getElementById("leadersLink")
+        .addEventListener("click", function (event) {
+          event.preventDefault(); // Prevent default anchor behavior
+
+          // Find the section with id "leaders"
+          var leadersSection = document.getElementById("leaders");
+
+          // Scroll to the section
+          leadersSection.scrollIntoView({ behavior: "smooth" });
+        });
+
+      document
+        .getElementById("pricingLink")
+        .addEventListener("click", function (event) {
+          event.preventDefault(); // Prevent default anchor behavior
+
+          // Find the section with id "leaders"
+          var leadersSection = document.getElementById("pricing");
+
+          // Scroll to the section
+          leadersSection.scrollIntoView({ behavior: "smooth" });
+        });
+    </script>
+
     <script>
       !(function (a) {
         var b =
