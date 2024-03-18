@@ -53,10 +53,10 @@
         <li>
           <a
             href="#"
-            id="pricingLink"
+            id="gameLink"
             class="text-lg font-semibold text-primaryColor"
           >
-            Pricing
+            Game
           </a>
         </li>
       </ul>
@@ -791,24 +791,36 @@
         ></div>
       </div>
     </section>
-    <section>
-      <iframe
-        frameborder="0"
-        src="https://itch.io/embed-upload/9967555?color=000000"
-        allowfullscreen=""
-        width="1024"
-        height="620"
-        ><a href="https://jatinbhandari.itch.io/myers-briggs-test"
-          >Take Myers Briggs Test</a
-        ></iframe
-      >
+    <section
+      id="mini-game"
+      class="min-h-screen flex justify-center items-center py-10"
+    >
+      <div class="max-w-[133rem] mx-auto px-4 sm:px-6 lg:px-8">
+        <h1 class="text-4xl font-bold text-center text-primaryColor">
+          Take world's most shortest and accurate,
+        </h1>
+        <h1 class="text-4xl font-bold text-gray-800 text-center mb-12">
+          Myers Briggs Test
+        </h1>
+        <iframe
+          frameborder="0"
+          src="https://itch.io/embed-upload/9967555?color=000000"
+          allowfullscreen=""
+          width="1024"
+          height="620"
+          class="shadow-lg rounded-lg"
+          ><a href="https://jatinbhandari.itch.io/myers-briggs-test"
+            >Take Myers Briggs Test</a
+          ></iframe
+        >
+      </div>
     </section>
 
-    <footer class="bg-white shadow-lg dark:bg-white">
+    <footer class="bg-white shadow-black shadow-inner">
       <div class="max-w-[133rem] mx-auto p-7 sm:px-6 lg:px-8">
         <div class="sm:flex sm:items-center sm:justify-between">
           <a
-            href="https://flowbite.com/"
+            href="https://google.com/"
             class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse"
           >
             <img
@@ -856,12 +868,12 @@
         });
 
       document
-        .getElementById("pricingLink")
+        .getElementById("gameLink")
         .addEventListener("click", function (event) {
           event.preventDefault(); // Prevent default anchor behavior
 
           // Find the section with id "leaders"
-          var leadersSection = document.getElementById("pricing");
+          var leadersSection = document.getElementById("mini-game");
 
           // Scroll to the section
           leadersSection.scrollIntoView({ behavior: "smooth" });
