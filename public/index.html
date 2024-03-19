@@ -12,6 +12,41 @@
   </head>
 
   <style>
+    /* Modal styles */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    .modal-content {
+      background-color: #fefefe;
+      margin: 15% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 30%;
+    }
+
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
     /* Default styles for larger devices */
     iframe {
       width: 640px;
@@ -56,25 +91,10 @@
             id="gameLink"
             class="text-lg font-semibold text-primaryColor"
           >
-            Game
+            Personality
           </a>
         </li>
       </ul>
-      <!-- <button class="md:hidden text-xl">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="h-8 w-8"
-          viewBox="0 0 20 20"
-          fill="#8B163D"
-        >
-          <path
-            fill-rule="evenodd"
-            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 9a1 1 0 100 2h12a1 1 0 100-2H3zM3 13a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-            clip-rule="evenodd"
-            x
-          />
-        </svg>
-      </button> -->
     </nav>
 
     <section class="md:min-h-screen md:mb-5 overflow-hidden">
@@ -98,7 +118,8 @@
           </div>
 
           <a
-            href="./form.html"
+            href="#"
+            id="popup"
             class="text-white uppercase bg-primaryColor hover:shadow-md hover:shadow-black focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-3 md:px-7 md:py-4 text-center"
           >
             Apply Now
@@ -791,27 +812,29 @@
         ></div>
       </div>
     </section>
+
     <section
       id="mini-game"
       class="min-h-screen flex justify-center items-center py-10"
     >
       <div class="max-w-[133rem] mx-auto px-4 sm:px-6 lg:px-8">
         <h1 class="text-4xl font-bold text-center text-primaryColor">
-          Take world's most shortest and accurate,
+          Take world's most accurate,
         </h1>
         <h1 class="text-4xl font-bold text-gray-800 text-center mb-12">
-          Myers Briggs Test
+          Professional personality test
         </h1>
         <iframe
           frameborder="0"
-          src="https://itch.io/embed-upload/9967992?color=000000"
+          class="rounded-sm shadow-sm"
+          src="https://itch.io/embed-upload/9974527?color=000000"
           allowfullscreen=""
           width="1024"
           height="620"
-          class="shadow-sm rounded-sm"
           ><a href="https://jatinbhandari.itch.io/myers-briggs-test"
-            >Take Test</a
+            >Play Myers Briggs Test on itch.io</a
           ></iframe
+        >
         >
       </div>
     </section>
@@ -842,6 +865,24 @@
       </div>
     </footer>
 
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p class="text-center pb-3">
+          Before we can continue with your acceptance. We need you to take the
+          world’s most accurate professional personality assessment.
+        </p>
+        <div class="flex w-full justify-center items-center">
+          <button
+            class="text-white uppercase bg-primaryColor hover:shadow-md hover:shadow-black focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-3 md:px-7 md:py-4 text-center"
+            id="okButton"
+          >
+            OK
+          </button>
+        </div>
+      </div>
+    </div>
     <script>
       document
         .getElementById("aboutLink")
@@ -878,6 +919,53 @@
           // Scroll to the section
           leadersSection.scrollIntoView({ behavior: "smooth" });
         });
+
+      document
+        .getElementById("popup")
+        .addEventListener("click", function (event) {
+          event.preventDefault(); // Prevent default anchor behavior
+
+          // Show the modal
+          showModal();
+        });
+
+      // Get the modal
+      var modal = document.getElementById("myModal");
+
+      // Get the <span> element that closes the modal
+      var span = document.getElementsByClassName("close")[0];
+
+      // Get the OK button
+      var okButton = document.getElementById("okButton");
+
+      // When the user clicks on the OK button, scroll to the mini-game section
+      okButton.onclick = function () {
+        var miniGameSection = document.getElementById("mini-game");
+        miniGameSection.scrollIntoView({ behavior: "smooth" });
+        closeModal();
+      };
+
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function () {
+        closeModal();
+      };
+
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          closeModal();
+        }
+      };
+
+      // Function to show the modal
+      function showModal() {
+        modal.style.display = "block";
+      }
+
+      // Function to close the modal
+      function closeModal() {
+        modal.style.display = "none";
+      }
     </script>
 
     <script>
